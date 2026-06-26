@@ -1,8 +1,8 @@
 import { FormEvent, useEffect, useState } from "react";
 import Button from "../components/Button";
-import JourneyCard from "../components/JourneyCard";
 import PricingCard from "../components/PricingCard";
 import SolutionCard from "../components/SolutionCard";
+import TestimonialCard from "../components/TestimonialCard";
 import Logo from "../assets/logo.svg";
 import Menu from "../assets/menu.svg";
 import Fechar from "../assets/fechar.svg";
@@ -31,21 +31,24 @@ const links = [
 
 const journey = [
   {
-    icon: Site,
+    image: Site,
     title: "Formacao",
     subtitle: "Engenharia de Software",
+    stars: 5,
     text: "Cursando Engenharia de Software de 2024 a 2026 no Centro Universitario Fundacao Assis Gurgacz.",
   },
   {
-    icon: Codigo,
+    image: Codigo,
     title: "Projetos",
     subtitle: "Graduacao",
+    stars: 4,
     text: "Desenvolvimento de projetos academicos com foco em logica de programacao e organizacao de codigo.",
   },
   {
-    icon: Contato,
+    image: Contato,
     title: "Objetivo",
     subtitle: "Oportunidade na area",
+    stars: 4,
     text: "Busca uma oportunidade para aplicar os conhecimentos da faculdade e evoluir na area de tecnologia.",
   },
 ];
@@ -263,7 +266,7 @@ export default function Home() {
           <section className="carousel" aria-label="Trajetoria academica">
             <div className="carousel-content">
               {[...journey, ...journey].map((item, index) => (
-                <JourneyCard key={`${item.title}-${index}`} {...item} />
+                <TestimonialCard key={`${item.title}-${index}`} {...item} />
               ))}
             </div>
           </section>
