@@ -59,13 +59,7 @@
   box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
 }
 
-.carousel-card > img {
-  width: 6.5rem;
-  height: 6.5rem;
-  border-radius: 50%;
-}
-
-.journey-card > img {
+.testimonial-image {
   width: 4.8rem;
   height: 4.8rem;
   border-radius: 8px;
