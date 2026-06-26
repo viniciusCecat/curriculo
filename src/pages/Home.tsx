@@ -53,12 +53,17 @@ const journey = [
   },
 ];
 
+type ToastType = "info" | "success" | "error";
+
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
   const [isSending, setIsSending] = useState(false);
+  const [toast, setToast] = useState<{ message: string; type: ToastType } | null>(
+    null,
+  );
 
   useEffect(() => {
     const html = document.querySelector("html");
@@ -68,6 +73,23 @@ export default function Home() {
     }
   }, [showMobileMenu]);
 
+  useEffect(() => {
+    if (!toast) {
+      return;
+    }
+
+    const timeout = window.setTimeout(() => {
+      setToast(null);
+    }, 4500);
+
+    return () => window.clearTimeout(timeout);
+  }, [toast]);
+
+  function showToast(message: string, type: ToastType) {
+    setStatus(message);
+    setToast({ message, type });
+  }
+
   function closeMenu() {
     setShowMobileMenu(false);
   }
@@ -75,7 +97,7 @@ export default function Home() {
   async function sendContactEmail(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsSending(true);
-    setStatus("Enviando mensagem...");
+    showToast("Enviando mensagem...", "info");
 
     try {
       const response = await fetch("/api/send-email", {
@@ -91,11 +113,11 @@ export default function Home() {
 
       setEmail("");
       setMessage("");
-      setStatus("Mensagem enviada com sucesso.");
+      showToast("Mensagem enviada com sucesso.", "success");
     } catch (error) {
       const errorMessage =
         error instanceof Error ? error.message : "Nao foi possivel enviar.";
-      setStatus(errorMessage);
+      showToast(errorMessage, "error");
     } finally {
       setIsSending(false);
     }
@@ -423,6 +445,12 @@ export default function Home() {
           </p>
         </section>
       </footer>
+
+      {toast && (
+        <div className={`toast toast-${toast.type}`} role="status" aria-live="polite">
+          {toast.message}
+        </div>
+      )}
     </>
   );
 }
