@@ -1,0 +1,60 @@
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.9rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  border: 0.15rem solid transparent;
+  color: var(--light-text-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background: transparent;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 0.15rem solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: var(--primary-color);
+  border-color: transparent;
+  color: var(--light-text-color);
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+
+@media (width >= 580px) {
+  .btn-primary,
+  .btn-secondary {
+    width: fit-content;
+    min-width: 9rem;
+  }
+}

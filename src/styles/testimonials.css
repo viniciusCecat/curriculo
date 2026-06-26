@@ -1,0 +1,117 @@
+#testimonials {
+  display: flex;
+  min-height: 42rem;
+  flex-direction: column;
+  gap: 2.5rem;
+  overflow: hidden;
+  padding-block: 4rem;
+  background: linear-gradient(180deg, #e7f8ef 0%, #d7ebff 100%);
+}
+
+#testimonials header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 1rem;
+  text-align: center;
+}
+
+#testimonials header > span > p {
+  color: var(--primary-color);
+  font-weight: var(--fw-bold);
+}
+
+#testimonials header > p {
+  max-width: 42rem;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
+  animation: swipe 30000ms linear infinite;
+}
+
+.carousel:hover .carousel-content {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.carousel-card {
+  display: flex;
+  min-width: 18rem;
+  min-height: 25rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--bg-color);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
+}
+
+.carousel-card > img {
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+}
+
+.journey-card > img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 8px;
+}
+
+.testimony {
+  max-width: 22rem;
+}
+
+.rating {
+  display: flex;
+  margin-top: auto;
+}
+
+.names {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+
+.names :first-child {
+  color: var(--text-color);
+  font-size: var(--fs-base);
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (width >= 780px) {
+  #testimonials {
+    align-items: center;
+    gap: 4rem;
+    padding-block: 5rem;
+  }
+
+  .carousel {
+    width: min(70rem, calc(100% - 2rem));
+  }
+
+  .carousel-card {
+    min-width: 24rem;
+  }
+}

@@ -1,0 +1,28 @@
+<svg width="620" height="430" viewBox="0 0 620 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="98" y="34" width="360" height="320" rx="18" fill="#FFFFFF" stroke="#D8E4DE" stroke-width="3"/>
+  <rect x="98" y="34" width="360" height="70" rx="18" fill="#138A5E"/>
+  <path d="M98 84H458" stroke="#138A5E" stroke-width="40"/>
+  <circle cx="136" cy="69" r="18" fill="#DFF7EA"/>
+  <path d="M128 68L135 75L147 61" stroke="#138A5E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="170" y="57" width="130" height="11" rx="5.5" fill="#FFFFFF"/>
+  <rect x="170" y="78" width="180" height="8" rx="4" fill="#BFEFD4"/>
+  <rect x="132" y="132" width="142" height="14" rx="7" fill="#182033"/>
+  <rect x="132" y="162" width="255" height="9" rx="4.5" fill="#D8E4DE"/>
+  <rect x="132" y="184" width="222" height="9" rx="4.5" fill="#D8E4DE"/>
+  <rect x="132" y="206" width="176" height="9" rx="4.5" fill="#D8E4DE"/>
+  <rect x="132" y="256" width="118" height="58" rx="10" fill="#F5F7F6" stroke="#D8E4DE" stroke-width="2"/>
+  <rect x="154" y="278" width="54" height="8" rx="4" fill="#138A5E"/>
+  <rect x="154" y="296" width="70" height="6" rx="3" fill="#BFEFD4"/>
+  <rect x="282" y="256" width="118" height="58" rx="10" fill="#F5F7F6" stroke="#D8E4DE" stroke-width="2"/>
+  <rect x="304" y="278" width="48" height="8" rx="4" fill="#2563EB"/>
+  <rect x="304" y="296" width="64" height="6" rx="3" fill="#BBD6FF"/>
+  <rect x="420" y="170" width="120" height="128" rx="15" fill="#182033"/>
+  <rect x="440" y="198" width="62" height="9" rx="4.5" fill="#DFF7EA"/>
+  <rect x="440" y="222" width="78" height="7" rx="3.5" fill="#8BBFA8"/>
+  <rect x="440" y="242" width="55" height="7" rx="3.5" fill="#8BBFA8"/>
+  <rect x="440" y="268" width="70" height="18" rx="6" fill="#138A5E"/>
+  <rect x="38" y="210" width="94" height="64" rx="14" fill="#DFF7EA"/>
+  <path d="M66 231L56 242L66 253" stroke="#138A5E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M104 231L114 242L104 253" stroke="#138A5E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M80 258H108" stroke="#2563EB" stroke-width="4" stroke-linecap="round"/>
+</svg>

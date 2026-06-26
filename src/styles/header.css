@@ -1,0 +1,85 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+.site-header nav {
+  min-height: 4.5rem;
+}
+
+.brand-logo {
+  width: min(13rem, 58vw);
+}
+
+.site-header a {
+  color: var(--text-color);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-md);
+}
+
+.site-header a:hover,
+.reverse-color {
+  color: var(--primary-color);
+}
+
+.mobile-menu {
+  display: initial;
+}
+
+.icon-button {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border-radius: 6px;
+  background: var(--secondary-color);
+  cursor: pointer;
+}
+
+.mobile-menu-content {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: var(--bg-color);
+  padding-top: 1rem;
+}
+
+.mobile-menu-content .container {
+  align-items: flex-start;
+  min-height: calc(100svh - 2rem);
+  position: relative;
+}
+
+.mobile-menu-content ul {
+  display: flex;
+  width: 100%;
+  min-height: calc(100svh - 2rem);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.mobile-menu-content .icon-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.mobile-menu-content a {
+  font-size: var(--fs-md);
+}
+
+@media (width >= 980px) {
+  .site-header {
+    position: relative;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
